@@ -1,0 +1,6 @@
+<h1>Editing User</h1>
+
+<%= render 'form', user: @user %>
+
+<%= link_to admin_user_path(@user), class: "btn btn-success" do %><span class="fas fa-eye mr-2"></span>Show<% end %> |
+<%= link_to admin_users_path, class: "btn btn-gray" do %><span class="fas fa-list mr-2"> List</span> <% end %>

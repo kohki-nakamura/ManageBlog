@@ -8,6 +8,17 @@ class User < ApplicationRecord
     true
   end
 
+  def gender_text
+    case self.gender
+    when 1
+      return "Female"
+    when 2
+      return "Male"
+    else
+      return ""
+    end
+  end
+
   private
 	def check_admin_user
 		redirect_to root_path unless current_user.is_admin?

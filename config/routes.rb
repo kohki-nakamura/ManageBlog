@@ -3,5 +3,6 @@ Rails.application.routes.draw do
 
   namespace :admin do
     root 'home#dashboard'
+    resources :users
   end
 end

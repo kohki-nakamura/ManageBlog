@@ -1,0 +1,52 @@
+<div class="card card-body border-light shadow-sm table-wrapper table-responsive pt-0">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Column</th>
+                <th>Content</th>
+            </tr>
+        </thead>
+        <tbody>
+					<tr>
+						<td>ID</td>
+						<td><%= @user.id %></td>
+					</tr>
+					<tr>
+						<td>Email</td>
+						<td><span class="font-weight-normal"><%= @user.email %></span></td>
+					</tr>
+                    <tr>
+                        <td>First Name</td>
+                        <td><%= @user.first_name %></td>
+                    </tr>
+                    <tr>
+                        <td>Last Name</td>
+                        <td><%= @user.last_name %></td>
+                    </tr>
+                    <tr>
+                        <td>Birthday</td>
+                        <td><%= @user.birthday %></td>
+                    </tr>
+                    <tr>
+                        <td>Gender</td>
+                        <td><%= @user.gender_text %></td>
+                    </tr>
+                    <tr>
+                        <td>Phone</td>
+                        <td><%= @user.phone %></td>
+                    </tr>
+                    <tr>
+                        <td>Zip Code</td>
+                        <td><%= @user.zipcode %></td>
+                    </tr>
+                    <tr>
+                        <td>Address</td>
+                        <td><%= @user.address %></td>
+                    </tr>
+        </tbody>
+    </table>
+</div>
+
+<br>
+<%= link_to edit_admin_user_path(@user), class: "btn btn-success" do %><span class="fas fa-edit mr-2"></span>Edit<% end %> |
+<%= link_to admin_users_path, class: "btn btn-gray" do %><span class="fas fa-list mr-2"> List</span> <% end %>

@@ -1,0 +1,50 @@
+<%= render 'admin/layouts/searchbar' %>
+
+<%= link_to new_admin_user_path do %>
+  <button class="btn btn-secondary text-dark mr-2 dropdown-toggle">
+      <span class="fas fa-plus mr-2"></span>New
+  </button>
+<% end %>
+
+<div class="card card-body border-light shadow-sm table-wrapper table-responsive pt-0">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Email</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+          <% @users.each do |user| %>
+            <tr>
+              <td><%= user.id %></td>
+              <td>
+                  <span class="font-weight-normal"><%= user.email %></span>
+              </td>
+              <td>
+                <div class="btn-group">
+                  <button class="btn btn-link text-dark dropdown-toggle dropdown-toggle-split m-0 p-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="icon icon-sm">
+                      <span class="fas fa-ellipsis-h icon-dark"></span>
+                    </span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                  </button>
+                  <div class="dropdown-menu">
+                    <%= link_to [:admin, user], class: "dropdown-item" do %><span class="fas fa-eye mr-2"></span>View Details<% end %>
+                    <%= link_to edit_admin_user_path(user), class: "dropdown-item" do %><span class="fas fa-edit mr-2"></span>Edit<% end %>
+                    <%= button_to [:admin, user, page: params[:page]], class: "dropdown-item text-danger", method: :delete do %><span class="fas fa-trash-alt mr-2"></span>Remove<% end %>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+    </table>
+    <div class="card-footer px-3 border-0 d-flex align-items-center justify-content-between">
+      <nav aria-label="Page navigation example">
+        <%= paginate @users %>
+      </nav>
+      <div class="font-weight-bold small">Showing <b><%= @users.count %></b> out of <b><%= User.count %></b> entries</div>
+    </div>
+</div>
