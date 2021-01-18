@@ -4,7 +4,8 @@ class Admin::UsersController < Admin::ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @users = User.page(params[:page]).per(10)
+    params[:display_count] ||= 10
+    @users = User.search(params[:search]).page(params[:page]).per(params[:display_count])
   end
 
   # GET /users/1

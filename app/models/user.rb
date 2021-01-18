@@ -4,6 +4,11 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  def self.search(search)
+		return User.all unless search
+		User.where(['email LIKE ?', "%#{search}%"])
+	end
+
   def is_admin?
     true
   end

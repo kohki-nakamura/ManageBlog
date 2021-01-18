@@ -7,6 +7,8 @@ import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
+
+// Volt
 import "./admin/volt.js"
 import "./admin/vendor/popper.min.js"
 import "./admin/vendor/on-screen.umd.min.js"
