@@ -13,6 +13,13 @@
 ActiveRecord::Schema.define(version: 2021_01_17_061227) do
 
   create_table "users", charset: "utf8mb4", force: :cascade do |t|
+    t.string "last_name"
+    t.string "first_name"
+    t.date "birthday"
+    t.integer "gender"
+    t.string "phone"
+    t.integer "zipcode"
+    t.string "address"
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
