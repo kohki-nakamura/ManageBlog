@@ -81,9 +81,11 @@
     </table>
     <div class="card-footer px-3 border-0 d-flex align-items-center justify-content-between">
       <nav aria-label="Page navigation example">
-        <%= paginate @users %>
+        <%= paginate @users, window: 2 %>
       </nav>
-      <div class="font-weight-bold small">Showing <b><%= @users.count %></b> out of <b><%= User.count %></b> entries</div>
+    </div>
+    <div class="card-footer px-3 border-0 d-flex align-items-center justify-content-between">
+      <div class="font-weight-bold small"><%= page_entries_info @users %></div>
     </div>
 </div>
 
