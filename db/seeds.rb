@@ -8,4 +8,5 @@
 
 100.times do |i|
 	User.create(email: "user_#{i}@example.com", password: "password")
+	Blog.create(title: "Title_#{i}", content: "Content_#{i}", is_public: true)
 end
