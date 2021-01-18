@@ -8,5 +8,10 @@ Rails.application.routes.draw do
         get "export_csv", format: :csv
       end
     end
+    resources :blogs do
+      collection do
+        get "export_csv", format: :csv
+      end
+    end
   end
 end

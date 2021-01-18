@@ -17,16 +17,22 @@
 			</div>
 		</div>
 		<ul class="nav flex-column">
-			<li class="nav-item  active ">
+			<li class="nav-item <%= "active" if controller.controller_name == "home" %>">
 				<%= link_to admin_root_path, class: "nav-link" do %>
 					<span class="sidebar-icon"><span class="fas fa-chart-pie"></span></span>
 					<span>Overview</span>
 				<% end %>
 			</li>
-			<li class="nav-item ">
+			<li class="nav-item <%= "active" if controller.controller_name == "users" %>">
 				<%= link_to admin_users_path, class: "nav-link" do %>
-					<span class="sidebar-icon"><span class="fas fa-chart-pie"></span></span>
-					<span>All Users</span>
+					<span class="sidebar-icon"><span class="fas fa-user"></span></span>
+					<span>Users</span>
+				<% end %>
+			</li>
+			<li class="nav-item <%= "active" if controller.controller_name == "blogs" %>">
+				<%= link_to admin_blogs_path, class: "nav-link" do %>
+					<span class="sidebar-icon"><span class="fas fa-file-alt"></span></span>
+					<span>Blogs</span>
 				<% end %>
 			</li>
 

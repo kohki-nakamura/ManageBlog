@@ -1,10 +1,10 @@
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center py-4">
   <div class="d-block mb-4 mb-md-0">
-    <h2 class="h4">All Users</h2>
+    <h2 class="h4">All Blogs</h2>
   </div>
 </div>
 
-<%= form_tag admin_users_path, method: :get, name: "search_form" do %>
+<%= form_tag admin_blogs_path, method: :get, name: "search_form" do %>
   <div class="table-settings mb-4">
     <div class="row align-items-center justify-content-between">
       <div class="col col-md-6 col-lg-3 col-xl-4">
@@ -29,17 +29,17 @@
           <span class="fas fa-plus mr-2"></span>New
       </button>
       <div class="dropdown-menu dashboard-dropdown dropdown-menu-left mt-2">
-          <%= link_to new_admin_user_path, class: "dropdown-item font-weight-bold" do %><span class="fas fa-tasks"></span>New User<% end %>
+          <%= link_to new_admin_blog_path, class: "dropdown-item font-weight-bold" do %><span class="fas fa-tasks"></span>New Blog<% end %>
           <% if false %>
             <a class="dropdown-item font-weight-bold" href="#"><span class="fas fa-cloud-upload-alt"></span>Upload Files</a>
-            <a class="dropdown-item font-weight-bold" href="#"><span class="fas fa-user-shield"></span>Preview Security</a>
+            <a class="dropdown-item font-weight-bold" href="#"><span class="fas fa-blog-shield"></span>Preview Security</a>
             <div role="separator" class="dropdown-divider"></div>
             <a class="dropdown-item font-weight-bold" href="#"><span class="fas fa-rocket text-danger"></span>Upgrade to Pro</a>
           <% end %>
       </div>
   </div>
   <div class="btn-group">
-      <%= button_to export_csv_admin_users_path(format: :csv), method: :get, class: "btn btn-sm btn-outline-primary" do %>Export<% end %>
+      <%= button_to export_csv_admin_blogs_path(format: :csv), method: :get, class: "btn btn-sm btn-outline-primary" do %>Export<% end %>
   </div>
 </div>
 
@@ -48,15 +48,17 @@
         <thead>
             <tr>
                 <th>ID</th>
-                <th>Email</th>
+                <th>Title</th>
+                <th>Public Setting</th>
                 <th>Action</th>
             </tr>
         </thead>
         <tbody>
-          <% @users.each do |user| %>
+          <% @blogs.each do |blog| %>
             <tr>
-              <td><%= user.id %></td>
-              <td><%= user.email %></td>
+              <td><%= blog.id %></td>
+              <td><%= blog.title %></td>
+              <td><%= blog.is_public ? "Public" : "Private" %></td>
               <td>
                 <div class="btn-group">
                   <button class="btn btn-link text-dark dropdown-toggle dropdown-toggle-split m-0 p-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -66,9 +68,9 @@
                     <span class="sr-only">Toggle Dropdown</span>
                   </button>
                   <div class="dropdown-menu">
-                    <%= link_to [:admin, user], class: "dropdown-item" do %><span class="fas fa-eye mr-2"></span>View Details<% end %>
-                    <%= link_to edit_admin_user_path(user), class: "dropdown-item" do %><span class="fas fa-edit mr-2"></span>Edit<% end %>
-                    <%= button_to [:admin, user, page: params[:page]], class: "dropdown-item text-danger", method: :delete do %><span class="fas fa-trash-alt mr-2"></span>Remove<% end %>
+                    <%= link_to [:admin, blog], class: "dropdown-item" do %><span class="fas fa-eye mr-2"></span>View Details<% end %>
+                    <%= link_to edit_admin_blog_path(blog), class: "dropdown-item" do %><span class="fas fa-edit mr-2"></span>Edit<% end %>
+                    <%= button_to [:admin, blog, page: params[:page]], class: "dropdown-item text-danger", method: :delete do %><span class="fas fa-trash-alt mr-2"></span>Remove<% end %>
                   </div>
                 </div>
               </td>
@@ -78,11 +80,11 @@
     </table>
     <div class="card-footer px-3 border-0 d-flex align-items-center justify-content-between">
       <nav aria-label="Page navigation example">
-        <%= paginate @users, window: 2 %>
+        <%= paginate @blogs, window: 2 %>
       </nav>
     </div>
     <div class="card-footer px-3 border-0 d-flex align-items-center justify-content-between">
-      <div class="font-weight-bold small"><%= page_entries_info @users %></div>
+      <div class="font-weight-bold small"><%= page_entries_info @blogs %></div>
     </div>
 </div>
 
