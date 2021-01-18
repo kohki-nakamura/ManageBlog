@@ -62,6 +62,16 @@ class Admin::UsersController < Admin::ApplicationController
     end
   end
 
+  def export_csv
+    respond_to do |format|
+      format.csv do
+        send_data User.to_csv,
+        type: 'text/csv; charset=utf-8',
+        filename: "users_#{Time.now.strftime("%Y_%m_%d_%H_%M_%S")}.csv"
+      end
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user

@@ -3,6 +3,10 @@ Rails.application.routes.draw do
 
   namespace :admin do
     root 'home#dashboard'
-    resources :users
+    resources :users do
+      collection do
+        get "export_csv", format: :csv
+      end
+    end
   end
 end
