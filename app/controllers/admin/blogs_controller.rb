@@ -65,9 +65,9 @@ class Admin::BlogsController < Admin::ApplicationController
   def export_csv
     respond_to do |format|
       format.csv do
-        send_data User.to_csv,
+        send_data Blog.to_csv,
         type: 'text/csv; charset=utf-8',
-        filename: "users_#{Time.now.strftime("%Y_%m_%d_%H_%M_%S")}.csv"
+        filename: "blogs_#{Time.now.strftime("%Y_%m_%d_%H_%M_%S")}.csv"
       end
     end
   end
