@@ -1,0 +1,12 @@
+// ボタンをリンク風に見せる
+// webpackでlink_toにメソッド指定ができなくなったため、苦肉の策
+// https://pisuke-code.com/css-way-to-make-link-style-button/
+button.link-style-btn{
+	cursor: pointer;
+	border: none;
+	background: none;
+	color: #0033cc;
+}
+button.link-style-btn:hover{
+	color: #002080;
+}

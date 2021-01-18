@@ -29,99 +29,113 @@
 					<span>All Users</span>
 				<% end %>
 			</li>
-			<li class="nav-item ">
-				<a href="../../pages/transactions.html" class="nav-link">
-						<span class="sidebar-icon"><span class="fas fa-hand-holding-usd"></span></span>
-						<span>Transactions</span>
-				</a>
-			</li>
-			<li class="nav-item ">
-				<a href="../../pages/settings.html" class="nav-link">
-						<span class="sidebar-icon"><span class="fas fa-cog"></span></span>
-						<span>Settings</span>
-				</a>
-			</li>
-			<li class="nav-item">
-				<span class="nav-link  collapsed  d-flex justify-content-between align-items-center" data-toggle="collapse" data-target="#submenu-app">
-					<span>
-						<span class="sidebar-icon"><span class="fas fa-table"></span></span> 
-						Tables
+
+			<% if false %>
+				<li class="nav-item ">
+					<a href="../../pages/transactions.html" class="nav-link">
+							<span class="sidebar-icon"><span class="fas fa-hand-holding-usd"></span></span>
+							<span>Transactions</span>
+					</a>
+				</li>
+				<li class="nav-item ">
+					<a href="../../pages/settings.html" class="nav-link">
+							<span class="sidebar-icon"><span class="fas fa-cog"></span></span>
+							<span>Settings</span>
+					</a>
+				</li>
+				<li class="nav-item">
+					<span class="nav-link  collapsed  d-flex justify-content-between align-items-center" data-toggle="collapse" data-target="#submenu-app">
+						<span>
+							<span class="sidebar-icon"><span class="fas fa-table"></span></span> 
+							Tables
+						</span>
+						<span class="link-arrow"><span class="fas fa-chevron-right"></span></span> 
 					</span>
-					<span class="link-arrow"><span class="fas fa-chevron-right"></span></span> 
-				</span>
-				<div class="multi-level collapse " role="list" id="submenu-app" aria-expanded="false">
-						<ul class="flex-column nav">
-								<li class="nav-item "><a class="nav-link" href="../../pages/tables/bootstrap-tables.html"><span>Bootstrap Tables</span></a></li>
-						</ul>
-				</div>
-			</li>
-			<li class="nav-item">
-				<span class="nav-link  collapsed  d-flex justify-content-between align-items-center" data-toggle="collapse" data-target="#submenu-pages">
-					<span>
-						<span class="sidebar-icon"><span class="far fa-file-alt"></span></span> 
-						Page examples
+					<div class="multi-level collapse " role="list" id="submenu-app" aria-expanded="false">
+							<ul class="flex-column nav">
+									<li class="nav-item "><a class="nav-link" href="../../pages/tables/bootstrap-tables.html"><span>Bootstrap Tables</span></a></li>
+							</ul>
+					</div>
+				</li>
+				<li class="nav-item">
+					<span class="nav-link  collapsed  d-flex justify-content-between align-items-center" data-toggle="collapse" data-target="#submenu-pages">
+						<span>
+							<span class="sidebar-icon"><span class="far fa-file-alt"></span></span> 
+							Page examples
+						</span>
+						<span class="link-arrow"><span class="fas fa-chevron-right"></span></span> 
 					</span>
-					<span class="link-arrow"><span class="fas fa-chevron-right"></span></span> 
-				</span>
-				<div class="multi-level collapse " role="list" id="submenu-pages" aria-expanded="false">
-						<ul class="flex-column nav">
-								<li class="nav-item"><a class="nav-link" href="../../pages/examples/sign-in.html"><span>Sign In</span></a></li>
-								<li class="nav-item"><a class="nav-link" href="../../pages/examples/sign-up.html"><span>Sign Up</span></a></li>
-								<li class="nav-item"><a class="nav-link" href="../../pages/examples/forgot-password.html"><span>Forgot password</span></a></li>
-								<li class="nav-item"><a class="nav-link" href="../../pages/examples/reset-password.html"><span>Reset password</span></a></li>
-								<li class="nav-item"><a class="nav-link" href="../../pages/examples/lock.html"><span>Lock</span></a></li>
-								<li class="nav-item"><a class="nav-link" href="../../pages/examples/404.html"><span>404 Not Found</span></a></li>
-								<li class="nav-item"><a class="nav-link" href="../../pages/examples/500.html"><span>500 Server Error</span></a></li>
-						</ul>
-				</div>
-			</li>
-			<li class="nav-item">
-				<span class="nav-link  collapsed  d-flex justify-content-between align-items-center" data-toggle="collapse" data-target="#submenu-components">
-					<span>
-						<span class="sidebar-icon"><span class="fas fa-box-open"></span></span> 
-						Components
+					<div class="multi-level collapse " role="list" id="submenu-pages" aria-expanded="false">
+							<ul class="flex-column nav">
+									<li class="nav-item"><a class="nav-link" href="../../pages/examples/sign-in.html"><span>Sign In</span></a></li>
+									<li class="nav-item"><a class="nav-link" href="../../pages/examples/sign-up.html"><span>Sign Up</span></a></li>
+									<li class="nav-item"><a class="nav-link" href="../../pages/examples/forgot-password.html"><span>Forgot password</span></a></li>
+									<li class="nav-item"><a class="nav-link" href="../../pages/examples/reset-password.html"><span>Reset password</span></a></li>
+									<li class="nav-item"><a class="nav-link" href="../../pages/examples/lock.html"><span>Lock</span></a></li>
+									<li class="nav-item"><a class="nav-link" href="../../pages/examples/404.html"><span>404 Not Found</span></a></li>
+									<li class="nav-item"><a class="nav-link" href="../../pages/examples/500.html"><span>500 Server Error</span></a></li>
+							</ul>
+					</div>
+				</li>
+				<li class="nav-item">
+					<span class="nav-link  collapsed  d-flex justify-content-between align-items-center" data-toggle="collapse" data-target="#submenu-components">
+						<span>
+							<span class="sidebar-icon"><span class="fas fa-box-open"></span></span> 
+							Components
+						</span>
+						<span class="link-arrow"><span class="fas fa-chevron-right"></span></span> 
 					</span>
-					<span class="link-arrow"><span class="fas fa-chevron-right"></span></span> 
-				</span>
-				<div class="multi-level collapse " role="list" id="submenu-components" aria-expanded="false">
-						<ul class="flex-column nav">
-								<li class="nav-item "><a class="nav-link" href="../../pages/components/buttons.html"><span>Buttons</span></a></li>
-								<li class="nav-item "><a class="nav-link" href="../../pages/components/notifications.html"><span>Notifications</span></a></li>
-								<li class="nav-item "><a class="nav-link" href="../../pages/components/forms.html"><span>Forms</span></a></li>
-								<li class="nav-item "><a class="nav-link" href="../../pages/components/modals.html"><span>Modals</span></a></li>
-								<li class="nav-item "><a class="nav-link" href="../../pages/components/typography.html"><span>Typography</span></a></li>
-						</ul>
-				</div>
-			</li>
+					<div class="multi-level collapse " role="list" id="submenu-components" aria-expanded="false">
+							<ul class="flex-column nav">
+									<li class="nav-item "><a class="nav-link" href="../../pages/components/buttons.html"><span>Buttons</span></a></li>
+									<li class="nav-item "><a class="nav-link" href="../../pages/components/notifications.html"><span>Notifications</span></a></li>
+									<li class="nav-item "><a class="nav-link" href="../../pages/components/forms.html"><span>Forms</span></a></li>
+									<li class="nav-item "><a class="nav-link" href="../../pages/components/modals.html"><span>Modals</span></a></li>
+									<li class="nav-item "><a class="nav-link" href="../../pages/components/typography.html"><span>Typography</span></a></li>
+							</ul>
+					</div>
+				</li>
+			<% end %>
+
 			<li role="separator" class="dropdown-divider mt-4 mb-3 border-black"></li>
-			<li class="nav-item">
-				<a href="../../index.html" class="nav-link d-flex align-items-center">
-					<span class="sidebar-icon">
-						<%= image_tag "light.svg", height: 20, width: 20, class: "Volt Logo" %>
-					</span>
-					<span class="mt-1">Volt Overview</span>
-				</a>
+
+			<li class="nav-item ">
+				<%= button_to destroy_user_session_path, method: :delete, class: "nav-link link-style-btn" do %>
+						<span class="sidebar-icon"><span class="fas fa-sign-out-alt"></span></span>
+						<span>Sign Out</span>
+				<% end %>
 			</li>
-			<li class="nav-item">
-				<a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/getting-started/quick-start/" target="_blank" class="nav-link d-flex align-items-center">
-					<span class="sidebar-icon"><span class="fas fa-book"></span></span>
-					<span>Quick Start</span>
-				</a>
-			</li>
-			<li class="nav-item">
-				<a href="https://themesberg.com" target="_blank" class="nav-link d-flex align-items-center">
-					<span class="sidebar-icon">
-						<%= image_tag "themesberg.svg", height: 20, width: 20, alt: "Themesberg Logo" %>
-					</span>
-					<span>Themesberg</span>
-				</a>
-			</li>
-			<li class="nav-item">
-				<a href="../../pages/upgrade-to-pro.html" class="btn btn-secondary d-flex align-items-center justify-content-center btn-upgrade-pro">
-					<span class="sidebar-icon"><span class="fas fa-rocket mr-2"></span></span>
-					<span>Upgrade to Pro</span>
-				</a>
-			</li>
+
+			<% if false %>
+				<li class="nav-item">
+					<a href="../../index.html" class="nav-link d-flex align-items-center">
+						<span class="sidebar-icon">
+							<%= image_tag "light.svg", height: 20, width: 20, class: "Volt Logo" %>
+						</span>
+						<span class="mt-1">Volt Overview</span>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/getting-started/quick-start/" target="_blank" class="nav-link d-flex align-items-center">
+						<span class="sidebar-icon"><span class="fas fa-book"></span></span>
+						<span>Quick Start</span>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a href="https://themesberg.com" target="_blank" class="nav-link d-flex align-items-center">
+						<span class="sidebar-icon">
+							<%= image_tag "themesberg.svg", height: 20, width: 20, alt: "Themesberg Logo" %>
+						</span>
+						<span>Themesberg</span>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a href="../../pages/upgrade-to-pro.html" class="btn btn-secondary d-flex align-items-center justify-content-center btn-upgrade-pro">
+						<span class="sidebar-icon"><span class="fas fa-rocket mr-2"></span></span>
+						<span>Upgrade to Pro</span>
+					</a>
+				</li>
+			<% end %>
 		</ul>
 	</div>
 </nav>
