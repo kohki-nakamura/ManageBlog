@@ -10,7 +10,11 @@
 	<body>
 		<%= render 'admin/layouts/navbar' %>
 		<%= render 'admin/layouts/sidebar' %>
-		<%= yield %>
+		<main class="content">
+			<%= render 'admin/home/navbar' %>
+			<%= yield %>
+		</main>
+		<%= render 'admin/layouts/footer' %>
 		<%= render 'admin/layouts/include_js' %>
 	</body>
 
