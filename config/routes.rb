@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
 
+  root "admin/home#dashboard"
+
   namespace :admin do
     root 'home#dashboard'
     resources :users do
