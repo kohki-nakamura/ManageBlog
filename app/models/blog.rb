@@ -4,6 +4,7 @@ class Blog < ApplicationRecord
 	validates :is_public, inclusion: {in: [true, false]}
 
   has_one_attached :image # ActiveStorage
+  has_rich_text :content  # ActionText
 
 	def self.search(search)
 		return Blog.all unless search
