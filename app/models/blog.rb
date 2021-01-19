@@ -3,8 +3,6 @@ class Blog < ApplicationRecord
 	validates :content, presence: true
 	validates :is_public, inclusion: {in: [true, false]}
 
-  mount_uploader :image, ImageUploader
-
 	def self.search(search)
 		return Blog.all unless search
 		Blog.where(['title LIKE ?', "%#{search}%"])
