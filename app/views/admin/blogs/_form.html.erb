@@ -30,6 +30,14 @@
       <h2 class="h5 mb-4">General information</h2>
       <%= render 'admin/layouts/error_message', object: blog %>
       <%= form_with(model: [:admin, blog]) do |f| %>
+        <label for="image">Image</label>
+        <div class="form-file mb-3">
+            <%= f.file_field :image, class: "form-file-input", id: "customFile" %>
+            <label class="form-file-label" for="customFile">
+                <span class="form-file-text">Choose file...</span>
+                <span class="form-file-button">Browse</span>
+            </label>
+        </div>
         <div class="row">
           <div class="col-md-12 mb-3">
             <div>

@@ -28,8 +28,16 @@ gem 'jbuilder', '~> 2.7'
 # Reduces boot times through caching; required in configaction_mailer.default_url_options/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
+# 認証
 gem 'devise'
+
+# ページネーション
 gem 'kaminari'
+
+#画像アップロード
+gem 'carrierwave'
+gem 'fog-aws'
+gem 'rmagick'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

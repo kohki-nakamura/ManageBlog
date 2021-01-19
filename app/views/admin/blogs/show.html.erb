@@ -11,9 +11,9 @@
                 <td>ID</td>
                 <td><%= @blog.id %></td>
             </tr>
-						<tr>
+            <tr>
                 <td>Image</td>
-                <td></td>
+                <td><%= image_tag @blog.image.present? ? @blog.image.url : "noimage.png" %></td>
             </tr>
             <tr>
                 <td>Public Setting</td>
