@@ -55,6 +55,7 @@ class Admin::BlogsController < Admin::ApplicationController
   # DELETE /blogs/1
   # DELETE /blogs/1.json
   def destroy
+    @blog.image.purge if @blog.image.attached? # ActiveStorage用
     @blog.destroy
     respond_to do |format|
       format.html { redirect_to admin_blogs_url(page: params[:page]), notice: 'Blog was successfully destroyed.' }

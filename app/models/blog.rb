@@ -3,6 +3,8 @@ class Blog < ApplicationRecord
 	validates :content, presence: true
 	validates :is_public, inclusion: {in: [true, false]}
 
+  has_one_attached :image # ActiveStorage用
+
 	def self.search(search)
 		return Blog.all unless search
 		Blog.where(['title LIKE ?', "%#{search}%"])

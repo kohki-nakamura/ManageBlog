@@ -13,7 +13,11 @@
             </tr>
             <tr>
                 <td>Image</td>
-                <td><%= image_tag @blog.get_image %></td>
+                <td>
+                    <% if @blog.image.attached? %>
+                        <%= image_tag @blog.image %>
+                    <% end %>
+                </td>
             </tr>
             <tr>
                 <td>Public Setting</td>
