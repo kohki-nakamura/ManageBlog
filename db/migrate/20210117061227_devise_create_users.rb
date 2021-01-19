@@ -11,6 +11,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.1]
       t.string :phone
       t.integer :zipcode
       t.string :address
+      t.boolean :is_admin, null: false, default: false
 
       ## Database authenticatable
       t.string :email,              null: false, default: ""

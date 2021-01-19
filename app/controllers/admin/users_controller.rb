@@ -80,6 +80,6 @@ class Admin::UsersController < Admin::ApplicationController
 
     # Only allow a list of trusted parameters through.
     def user_params
-      params.fetch(:user, {}).permit(:last_name, :first_name, :birthday, :gender, :phone, :zipcode, :address, :email, :password)
+      params.fetch(:user, {}).permit(:last_name, :first_name, :birthday, :gender, :phone, :zipcode, :address, :is_admin, :email, :password)
     end
 end
