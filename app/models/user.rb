@@ -12,7 +12,7 @@ class User < ApplicationRecord
 	end
 
   def is_admin?
-    true
+    self.is_admin
   end
 
   def gender_text
