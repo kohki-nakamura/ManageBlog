@@ -52,6 +52,6 @@ test:
 #
 production:
   <<: *default
-  database: rails_admin_template_production
-  username: rails_admin_template
-  password: <%= ENV['RAILS_ADMIN_TEMPLATE_DATABASE_PASSWORD'] %>
+  database: manage_blog
+  username: root
+  password: <%= ENV['MANAGE_BLOG_DATABASE_PASSWORD'] %>
