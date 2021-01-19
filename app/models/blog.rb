@@ -3,7 +3,7 @@ class Blog < ApplicationRecord
 	validates :content, presence: true
 	validates :is_public, inclusion: {in: [true, false]}
 
-  has_one_attached :image # ActiveStorage用
+  has_one_attached :image # ActiveStorage
 
 	def self.search(search)
 		return Blog.all unless search
