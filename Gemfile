@@ -31,12 +31,12 @@ gem 'bootsnap', '>= 1.4.4', require: false
 
 # 認証
 gem 'devise'
-
 # ページネーション
 gem 'kaminari'
-
 # Web Server
 gem 'unicorn'
+# 環境変数
+gem 'dotenv-rails'
 
 
 group :development, :test do
