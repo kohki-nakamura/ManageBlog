@@ -13,7 +13,7 @@
             </tr>
             <tr>
                 <td>Image</td>
-                <td><%= image_tag @blog.image.present? ? @blog.image.url : "noimage.png" %></td>
+                <td><%= image_tag @blog.get_image %></td>
             </tr>
             <tr>
                 <td>Public Setting</td>

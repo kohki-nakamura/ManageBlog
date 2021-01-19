@@ -10,6 +10,10 @@ class Blog < ApplicationRecord
 		Blog.where(['title LIKE ?', "%#{search}%"])
 	end
 
+  def get_image
+    self.image.present? ? self.image.url : "noimage.png"
+  end
+
 	scope :to_csv, -> {
     headers = %w(
       id title content is_public image
