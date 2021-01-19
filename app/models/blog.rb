@@ -1,6 +1,5 @@
 class Blog < ApplicationRecord
 	validates :title, presence: true
-	validates :content, presence: true
 	validates :is_public, inclusion: {in: [true, false]}
 
   has_one_attached :image # ActiveStorage
