@@ -26241,6 +26241,7 @@ label {
 .form-bg-image {
     background-repeat: no-repeat !important;
     background-position: top center !important;
+    background-image: url('signin.svg');
 }
 
 /**
